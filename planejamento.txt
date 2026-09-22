@@ -1,0 +1,61 @@
+====================================================================
+DOCUMENTO DE PLANEJAMENTO DO PROJETO INDIVIDUAL
+====================================================================
+
+Título do Projeto: GameRank — Plataforma de Avaliação e Catálogo de Jogos
+Aluno: Juan Nicolas Gomes dos Santos
+
+--------------------------------------------------------------------
+1. TEMA ESCOLHIDO
+--------------------------------------------------------------------
+Aplicação mobile desenvolvida em React Native com Expo focada no
+catálogo, descoberta e avaliação de jogos de videogame. Permite visualizar
+os títulos mais bem avaliados e gerenciar desenvolvedoras e jogos cadastrados.
+
+--------------------------------------------------------------------
+2. ENTIDADES DO SISTEMA
+--------------------------------------------------------------------
+
+Entidade 1: Jogo (Game)
+- Representa os títulos de videogame cadastrados no sistema.
+- Atributos (4):
+  1. id (Identificador único - String/Number)
+  2. nome (Nome do jogo - String)
+  3. dataLancamento (Data de lançamento - String)
+  4. nota (Nota de avaliação de 0 a 10 - Number)
+
+Entidade 2: Desenvolvedora (Developer)
+- Representa os estúdios/empresas criadoras dos jogos.
+- Atributos (3):
+  1. id (Identificador único - String/Number)
+  2. nome (Nome da empresa/estúdio - String)
+  3. paisOrigem (País de origem do estúdio - String)
+
+--------------------------------------------------------------------
+3. RELACIONAMENTO ENTRE AS ENTIDADES
+--------------------------------------------------------------------
+- Tipo: 1 para N (1:N)
+- Descrição: Uma Desenvolvedora pode ter vários Jogos criados por ela,
+  e cada Jogo pertence a uma Desenvolvedora cadastrada no sistema.
+
+--------------------------------------------------------------------
+4. ESTRUTURA DE TELAS DO APLICATIVO
+--------------------------------------------------------------------
+O aplicativo é composto por 3 telas principais (Tabs) e 2 modais:
+
+1. Tela Início (Home):
+   - Exibe um carrossel em destaque com o Top 3 jogos mais bem avaliados.
+   - Apresenta um resumo do projeto e botões de atalho rápido.
+
+2. Tela Descobrir Jogos (Discover):
+   - Exibe a listagem completa (Read - CRUD 1) de todos os jogos cadastrados.
+   - Possui botão para abrir o Modal de Cadastro/Edição de Jogos.
+
+3. Tela Desenvolvedoras (Developers):
+   - Exibe a listagem completa (Read - CRUD 2) dos estúdios cadastrados.
+   - Possui botão para abrir o Modal de Cadastro/Edição de Desenvolvedoras.
+
+4. Modais de Ação (CRUD - Create, Update, Delete):
+   - Modal Jogo: Formulário sobreposto para adicionar, editar ou excluir um jogo.
+   - Modal Desenvolvedora: Formulário sobreposto para adicionar, editar ou excluir uma desenvolvedora.
+====================================================================
