@@ -11,10 +11,9 @@ import {
 import { gamesData } from '../data/games';
 
 const { width } = Dimensions.get('window');
-const CAROUSEL_WIDTH = width - 40; // Largura ajustada com padding da tela
+const CAROUSEL_WIDTH = width - 40; 
 
 export function Home({ setAbaAtual, abrirModalCadastro }) {
-  // Ordena os jogos por nota decrescente e pega os 3 primeiros
   const top3Games = [...gamesData]
     .sort((a, b) => b.nota - a.nota)
     .slice(0, 3);
